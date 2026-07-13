@@ -1,0 +1,12 @@
+{
+    "extends": "./base.json",
+    "compilerOptions": {
+        "lib": [
+            "ES2023",
+            "DOM"
+        ],
+        "jsx": "react-jsx",
+        "declaration": true,
+        "declarationMap": true
+    }
+}
