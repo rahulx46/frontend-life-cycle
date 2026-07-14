@@ -29,7 +29,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Run TypeScript
-        run: pnpm --filter customer-portal exec tsc --noEmit
+        run: pnpm --filter enduser-portal exec tsc --noEmit
 
   lint:
     name: ESLint
@@ -52,7 +52,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Run ESLint
-        run: pnpm --filter customer-portal lint
+        run: pnpm --filter enduser-portal lint
 
   unit-tests:
     name: Unit Tests
@@ -75,7 +75,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Run Unit Tests with Coverage
-        run: pnpm --filter customer-portal test
+        run: pnpm --filter enduser-portal test
 
   build:
     name: Production Build
@@ -98,13 +98,13 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Application
-        run: pnpm --filter customer-portal build
+        run: pnpm --filter enduser-portal build
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: customer-portal
-          path: apps/customer-portal/dist
+          name: enduser-portal
+          path: apps/enduser-portal/dist
           if-no-files-found: error
           retention-days: 1
 
@@ -137,7 +137,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Run Unit Tests with Coverage
-        run: pnpm --filter customer-portal test
+        run: pnpm --filter enduser-portal test
 
       - name: Run SonarCloud Analysis
         uses: SonarSource/sonarqube-scan-action@v6
