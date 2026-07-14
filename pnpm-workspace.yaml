@@ -2,5 +2,5 @@ packages:
   - 'apps/*'
   - 'packages/*'
 allowBuilds:
-  nx: set this to true or false
+  nx: true
   unrs-resolver: true
