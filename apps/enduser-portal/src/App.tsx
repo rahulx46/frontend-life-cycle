@@ -9,6 +9,7 @@ function App() {
         <p>new feature!</p>
         <p>new changes added!</p>
         <p>testing workflow</p>
+        <p>testing ci workflow</p>
     </>
   )
 }
